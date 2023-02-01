@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>marks and grade</title>
+    <h1 align="center">marks and grade calculat</h1>
+
+    <script>
+        var counter = 1;
+        let inp;
+
+        function add() {
+            counter++;
+            inp = counter + ": <input type='number' id = 'num" + counter + "'> </br>";
+            document.getElementById("mainDiv").innerHTML = document.getElementById("mainDiv").innerHTML + inp;
+
+
+
+        }
+
+        function calculat() {
+            let sum = 0;
+            let percentage, p;
+            for (let i = 1; i <= counter; i++) {
+
+                let a = parseFloat(document.getElementById('num' + i).value);
+                // alert(i);
+                sum = sum + a;
+                percentage = sum / i;
+
+
+            }
+
+            console.log(percentage)
+            document.getElementById("total").innerHTML = " total : " + sum;
+            document.getElementById("percentage").innerHTML = "percentage : " + percentage;
+            if (percentage >= 90) {
+                p = "A grade";
+            } else if (percentage >= 80) {
+                p = "B grade"
+
+            } else if (percentage >= 70) {
+                p = "C grade"
+
+            } else if (percentage >= 60) {
+                p = "D grade"
+
+            } else if (percentage >= 40) {
+                p = "E grade"
+            } else {
+                p = " F grade"
+            }
+            document.getElementById("grade").innerHTML = "grades : " + p;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="mainDiv" style="float:left;margin: 1%;">
+        <div>
+            <Label>1: </Label><input type="number" id="num1">
+        </div>
+    </div>
+    <div style="float:left;margin: 1%;">
+        <div>
+            <button onclick="calculat()">calculat</button>
+            <button onclick="add()">+</button>
+
+        </div>
+    </div>
+
+    <div style="float:left;margin: 1%;">
+        <div>
+            <p id="total"></p>
+            <p id="percentage"></p>
+            <p id="grade"></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

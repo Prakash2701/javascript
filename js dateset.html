@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Dates</h1>
+    <h2>The getHours() Method</h2>
+    <p>Return the hours of a date as a number (0-23):</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        var date = new Date();
+        var d = new Date();
+        date.setFullYear(date.getFullYear() + 3)
+        date.setHours(date.getHours() + 5)
+        date.setMonth(date.getMonth() + 2)
+        date.setDate(date.getDate() + 4)
+        date.setSeconds(date.getSeconds() + 32)
+        date.setMinutes(date.getMinutes() + 25)
+
+
+
+        console.log(d);
+
+
+        document.getElementById("demo").innerHTML = date;
+        document.getElementById("demo2").innerHTML = d;
+    </script>
+
+</body>
+
+</html>

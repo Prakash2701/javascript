@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        let re;
+
+        function dec2() {
+            let dec = parseInt(document.getElementById("dec").value);
+            re = (dec >>> 0).toString(2);
+            document.getElementById("demo").innerHTML = re;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>JavaScript Convert Decimal to Binary</h1>
+
+
+    <div>
+        <div>
+            <label>Decimal :</label> <input type="number" id="dec">
+        </div>
+    </div>
+    <div>
+        <div>
+            <button onclick="dec2()">Binary</button>
+        </div>
+    </div>
+
+    <p id="demo"></p>
+</body>
+
+</html>

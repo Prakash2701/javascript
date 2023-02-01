@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function no() {
+            let i = parseFloat(document.getElementById("user").value);
+            let b = document.getElementById("a").value;
+            let o = parseFloat(document.getElementById("r").value);
+            let z;
+
+            if (b == "-") {
+                z = i - o;
+            } else {
+                if (b == "*") {
+                    z = i * o;
+                } else {
+                    if (b == "/") {
+                        z = i / o;
+                    } else {
+                        if (b == "+") {
+                            z = i + o;
+                        } else {
+                            if (b == "%") {
+                                z = i % o;
+                            }
+                        }
+                    }
+                }
+            }
+            alert(z);
+            document.getElementById("in").innerHTML = z;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>calculator</h1>
+    <p id="in"></p>
+    <form id="form" onsubmit="return false;">
+        <input type="number" id="user" />
+        <input type="text" id="a" />
+        <input type="number" id="r" />
+        <button onclick="no()">=</button>
+    </form>
+</body>
+
+</html>

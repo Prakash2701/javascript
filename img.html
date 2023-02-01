@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function on_off() {
+            /* var a = 10;
+                        var b = 12;
+                        alert(a + b);*/
+
+            if (
+                document
+                .getElementById("Image")
+                .src.indexOf("photo_2023-01-03_21-23-36") > -1
+            ) {
+                document.getElementById("Image").src =
+                    "D:\photo_2023-01-03_21-23-44.jpg";
+                //On button
+                document.getElementById("pi").textContent = "on button";
+            } else {
+                document.getElementById("Image").src =
+                    "D:\photo_2023-01-03_21-23-36.jpg";
+                //Off button
+                document.getElementById("pi").textContent = "off button";
+            }
+
+            alert(document.getElementById("pi").textContent);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>javascript img testing</h1>
+    <!--<button onclick="document.getElementById('Image').src='D:\photo_2023-01-03_21-23-36.jpg'">
+      Turn on the light
+    </button>-->
+    <img id="Image" src="" style="width: 200px" />
+
+    <!-- <button onlclick="document.getElementById('Image').src='D:\photo_2023-01-03_21-23-44.jpg'">
+      Turn off the light
+    </button>-->
+    <div>
+        <button id="pi" onclick="on_off()">On Button</button>
+    </div>
+</body>
+
+</html>

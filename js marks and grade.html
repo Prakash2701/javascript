@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<table border="1" align="center">
+
+    <body>
+
+        <h2>marks and grade</h2>
+
+        <script>
+            function no() {
+                let a = parseFloat(document.getElementById("java").value);
+                let b = parseFloat(document.getElementById("c").value);
+                let s = parseFloat(document.getElementById("script").value);
+                let c = parseFloat(document.getElementById("python").value);
+                let d = parseFloat(document.getElementById("html").value);
+
+                let total = a + b + s + c + d;
+
+                let p;
+                let percentage = total / 500 * 100;
+                document.getElementById("tota").innerHTML = "total " + " " + total;
+                document.getElementById("perc").innerHTML = "percentage " + " " + percentage;
+                if (percentage >= 90) {
+                    p = "A grade";
+                } else if (percentage >= 80) {
+                    p = "B grade"
+
+                } else if (percentage >= 70) {
+                    p = "C grade"
+
+                } else if (percentage >= 60) {
+                    p = "D grade"
+
+                } else if (percentage >= 40) {
+                    p = "E grade"
+                } else {
+                    p = " F grade"
+                }
+                console.log(p)
+                console.log(percentage)
+                document.getElementById("grade").innerHTML = p;
+            }
+        </script>
+        <form onsubmit="return false;">
+            <tr>
+                <td><label for="java">java:</label></td>
+                <td><input type="number" id="java"></td>
+            </tr>
+            <tr>
+                <td><label for="c">C:</label></td>
+                <td><input type="number" id="c"></td>
+            </tr>
+            <tr>
+                <td><label for="script">script:</label></td>
+                <td><input type="number" id="script"></td>
+            </tr>
+            <tr>
+                <td><label for="python">python:</label></td>
+                <td><input type="number" id="python"></td>
+            </tr>
+            <tr>
+                <td><label for="html">html:</label></td>
+                <td><input type="number" id="html"></td>
+            </tr>
+            <tr>
+                <td><button onclick="no()" style="border-bottom-right-radius: 10px;">calculat</button></td>
+                <td>
+                    <p id="tota"></p>
+                    <p id="perc"></p>
+                    <p id="grade"></p>
+                </td>
+            </tr>
+        </form>
+
+
+    </body>
+
+</html>
